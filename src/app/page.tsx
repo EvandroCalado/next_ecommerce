@@ -1,9 +1,23 @@
-import { Example } from '../components';
+import { CardGrid } from '../components';
 
-export default function Home() {
+const getProducts = async () => {
+  const res = await fetch('https://fakestoreapi.com/products');
+
+  if (!res.ok) {
+    throw new Error('Failed to fetch data');
+  }
+
+  return res.json();
+};
+
+export const Home = async () => {
+  const products = await getProducts();
+
   return (
-    <div>
-      <Example />
+    <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <CardGrid products={products} />
     </div>
   );
-}
+};
+
+export default Home;
