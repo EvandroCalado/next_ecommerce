@@ -23,10 +23,10 @@ export const CardProduct: FC<CardProductProps> = (props) => {
         <h2 className="line-clamp-1 text-xl font-semibold text-zinc-900">
           {product.title}
         </h2>
-        <span className="text-zinc-900">R$ {product.price}</span>
+        <span className="font-semibold text-teal-500">R$ {product.price}</span>
       </div>
 
-      <button className="flex w-full items-center justify-center rounded-md bg-green-500 px-4 py-2 text-white duration-150 hover:bg-green-600">
+      <button className="flex w-full items-center justify-center rounded-md bg-teal-500 px-4 py-2 text-white duration-150 hover:bg-teal-600">
         Adicionar
       </button>
     </Link>
