@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "prisma generate && next dev",
+    "build": "prisma generate && primsa db push && next build",
     "start": "next start",
     "lint": "next lint",
     "storybook": "storybook dev -p 6006",
@@ -14,6 +14,7 @@
   "dependencies": {
     "@clerk/localizations": "^1.26.7",
     "@clerk/nextjs": "^4.26.1",
+    "@prisma/client": "^5.5.2",
     "next": "14.0.0",
     "react": "^18",
     "react-dom": "^18"
@@ -49,6 +50,7 @@
     "postcss": "^8",
     "prettier": "^3.0.3",
     "prettier-plugin-tailwindcss": "^0.5.6",
+    "prisma": "^5.5.2",
     "storybook": "^7.5.1",
     "tailwindcss": "^3",
     "ts-jest": "^29.1.1",
