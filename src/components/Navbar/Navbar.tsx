@@ -1,3 +1,4 @@
+import { SignInButton, SignedIn, SignedOut, UserButton } from '@clerk/nextjs';
 import Link from 'next/link';
 
 export const Navbar = () => {
@@ -10,6 +11,19 @@ export const Navbar = () => {
         >
           Next Ecommerce
         </Link>
+        <div className="flex items-center gap-8">
+          <SignedIn>
+            <UserButton />
+          </SignedIn>
+
+          <SignedOut>
+            <SignInButton mode="modal">
+              <button className="rounded-md border px-3 py-2 uppercase duration-150 hover:bg-zinc-900">
+                Entrar
+              </button>
+            </SignInButton>
+          </SignedOut>
+        </div>
       </nav>
       <div className="h-[64px]">{/* Navbar fade */}</div>
     </>

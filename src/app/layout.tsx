@@ -1,3 +1,5 @@
+import { ptBR } from '@clerk/localizations';
+import { ClerkProvider } from '@clerk/nextjs';
 import type { Metadata } from 'next';
 import { Navbar } from '../components';
 import '../styles/globals.css';
@@ -13,11 +15,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-BR">
-      <body>
-        <Navbar />
-        <main>{children}</main>
-      </body>
-    </html>
+    <ClerkProvider localization={ptBR}>
+      <html lang="pt-BR">
+        <body>
+          <Navbar />
+          <main>{children}</main>
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }
