@@ -13,7 +13,7 @@ export const CardProduct: FC<CardProductProps> = (props) => {
   return (
     <Link
       href={`/products/${product.id}`}
-      className="flex h-96 flex-col rounded-md bg-white p-4 shadow-md duration-150 hover:opacity-90"
+      className="flex h-96 flex-col rounded-2xl bg-white p-4 shadow-2xl duration-150 hover:opacity-90"
     >
       <div className="relative max-h-72 flex-1">
         <CardImage product={product} fill />
@@ -23,10 +23,12 @@ export const CardProduct: FC<CardProductProps> = (props) => {
         <h2 className="line-clamp-1 text-xl font-semibold text-zinc-900">
           {product.title}
         </h2>
-        <span className="font-semibold text-teal-500">R$ {product.price}</span>
+        <span className="font-semibold text-indigo-600">
+          R$ {product.price}
+        </span>
       </div>
 
-      <button className="flex w-full items-center justify-center rounded-md bg-teal-500 px-4 py-2 text-white duration-150 hover:bg-teal-600">
+      <button className="flex w-full items-center justify-center rounded-lg bg-indigo-600 px-4 py-2 text-white duration-150 hover:bg-indigo-700">
         Adicionar
       </button>
     </Link>
