@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { FC, useState } from 'react';
-import { TypeProduct } from '../../types/typeProduct';
+import { TypeProduct } from '../../types';
 
 export type CardImageProps = {
   product: TypeProduct;

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { FC } from 'react';
 import { CardImage } from '..';
-import { TypeProduct } from '../../types/typeProduct';
+import { TypeProduct } from '../../types';
 
 export type CardProductProps = {
   product: TypeProduct;

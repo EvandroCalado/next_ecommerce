@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { CardProduct } from '..';
-import { TypeProduct } from '../../types/typeProduct';
+import { TypeProduct } from '../../types';
 
 export type CardGridProps = {
   products: TypeProduct[];
